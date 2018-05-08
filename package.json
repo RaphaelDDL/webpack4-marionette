@@ -1,6 +1,6 @@
 {
     "name": "webpack-marionette-boilerplate",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "author": "RaphaelDDL",
     "app": {
         "title": "App Title",

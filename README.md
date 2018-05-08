@@ -1,4 +1,6 @@
-# webpack-marionette-boilerplate
+# webpack-marionette-boilerplate (v0.0.2)
+
+_by [RaphaelDDL](http://raphaelddl.com)_
 
 A prototype boilerplate for single-page application using:
 
@@ -28,7 +30,12 @@ Added an `app` object which you can customize the HTML title with `title` and th
 - `npm run setup`: Start fresh. Deletes `dist` and `node_modules` folders, as well as `package-lock.json`, then run `npm install` for you
 -  `npm run build`: Exports production code to `dist` folder
 -  `npm run dev`: Starts dev server, with HMR
--  `npm run dash`: Starts dev server with fancy Webpack Dashboard.
+-  `npm run dash`: Starts `npm run dev` with fancy Webpack Dashboard.
+
+
+### Production
+
+Prod code minifies the HTML, CSS and JS, as well as split CSS into it's own file, for better performance. 
 
 
 _more readme to be written yet_
