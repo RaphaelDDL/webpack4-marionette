@@ -1,0 +1,10 @@
+@import "partials/foundation";
+
+body {
+	background-color: #fff;
+	font-weight: bold;
+
+	&.RaphaelDDL {
+		color: red;
+	}
+}
