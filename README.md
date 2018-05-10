@@ -1,4 +1,4 @@
-# webpack-marionette-boilerplate (v0.0.2)
+# webpack4-marionette (v0.0.2)
 
 _by [RaphaelDDL](http://raphaelddl.com)_
 
