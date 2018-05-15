@@ -1,22 +1,23 @@
-# webpack-marionette-boilerplate (v0.0.2)
+# webpack4-marionette (v0.0.3)
 
 _by [RaphaelDDL](http://raphaelddl.com)_
 
 A prototype boilerplate for single-page application using:
 
 - Webpack v4+
-- Babel v6+
+- Babel v6+ (with `preset-env` and `register`)
 - Backbone.js v1+
 - Marionette.js v3+
+- Backbone Radio v2+
 - jQuery v3+
-- jQuery v1+
+- Underscore v1+ (hard dependency of backbone :( )
 - Handlebars v4+
 - Sass (+Foundation v6+ and Font-Awesome v4+)
 - Loaders for various file types (json, xml, image, etc)
 
 ### package.json
 
-Added an `app` object which you can customize the HTML title with `title` and the ID of the div your Marionette Application will use with `appMountId`. The ID will be automatically inserted into the HTMLas well as set as your Application's region. Also add your Google Analytics ID at `analyticsTrackingId` (Note: GA will only be included on production build).
+Added an `app` object which you can customize the HTML title with `title` and the ID of the div your Marionette Application will use with `appMountId`. The ID will be automatically inserted into the HTMLas well as set as your Application's region. Also add your Google Analytics ID at `analyticsTrackingId` (Note: GA will be included on production build only).
 
     "app": {
         "title": "App Title",
@@ -24,6 +25,8 @@ Added an `app` object which you can customize the HTML title with `title` and th
         "appMountId": "appId"
     },
 
+
+The .html file is created by `html-webpack-plugin` and it's using `html-webpack-template` as the base template.
 
 ### Commands
 
