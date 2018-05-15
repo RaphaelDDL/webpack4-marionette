@@ -21,12 +21,11 @@ console.log( '\n================================\n\n' );
 export default ( options ) => ( {
     mode: options.mode,
     devtool: options.devtool,
+    entry: options.entry,
     devServer: options.devServer, //webpack-dev-server
     performance: options.performance || {},
     target: 'web', // Make web variables accessible to webpack, e.g. window
-    entry: [
-        PATHS.entry
-    ],
+
     output: Object.assign( {
         path: PATHS.dist,
         sourceMapFilename: '[file].map',
@@ -43,7 +42,9 @@ export default ( options ) => ( {
                 },
                 vendor: {
                     name: 'vendor',
-                    minChunks: 2
+                    test: /node_modules/,
+                    chunks: 'initial',
+                    enforce: true
                 }
             }
         }

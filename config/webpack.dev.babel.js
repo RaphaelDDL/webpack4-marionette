@@ -11,12 +11,18 @@ import PATHS from './config.paths';
 import WebpackBaseConfigs from './webpack.base.config.babel.js';
 import CircularDependencyPlugin from 'circular-dependency-plugin';
 import DashboardPlugin from 'webpack-dashboard/plugin';
+import BundleAnalyzerPlugin from 'webpack-bundle-analyzer';
 
 const DEV_SERVER_PORT = 8090;
 
 
 export default WebpackBaseConfigs( {
     mode: 'development',
+
+    entry: [
+        'webpack-hot-middleware/client?reload=true',
+        PATHS.entry
+    ],
 
     optimization: {
         namedModules: true,
@@ -41,6 +47,8 @@ export default WebpackBaseConfigs( {
     // Add development plugins
     plugins: [
         new webpack.HotModuleReplacementPlugin(), // Tell webpack we want hot reloading
+
+        new BundleAnalyzerPlugin(), //analyzer runs on :8888
 
         new webpack.NamedModulesPlugin(),
 

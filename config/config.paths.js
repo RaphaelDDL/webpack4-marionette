@@ -1,3 +1,10 @@
+//* ========================
+//#FILE - config.paths.js
+//> Author: Raphael Oliveira
+//>
+//> Create Date: <May 04, 2018>
+//>
+//======================== */
 import path from 'path';
 
 export default {

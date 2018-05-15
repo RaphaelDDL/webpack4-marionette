@@ -1,6 +1,6 @@
 {
-    "name": "webpack-marionette-boilerplate",
-    "version": "0.0.2",
+    "name": "webpack4-marionette",
+    "version": "0.0.3",
     "author": "RaphaelDDL",
     "app": {
         "title": "App Title",
@@ -24,16 +24,17 @@
         "lint:js": "npm run lint:eslint -- . "
     },
     "dependencies": {
-        "backbone": "^x.x.x",
-        "backbone.marionette": "^x.x.x",
-        "font-awesome": "^x.x.x",
-        "foundation-sites": "^x.x.x",
-        "handlebars": "^x.x.x",
-        "jquery": "^x.x.x",
-        "underscore": "^x.x.x"
+        "backbone": "^1.x.x",
+        "backbone.marionette": "^3.x.x",
+        "backbone.radio": "^2.x.x",
+        "font-awesome": "^4.x.x",
+        "foundation-sites": "^6.x.x",
+        "handlebars": "^4.x.x",
+        "jquery": "^3.x.x",
+        "underscore": "^1.x.x"
     },
     "devDependencies": {
-        "babel-core": "^x.x.x",
+        "babel-core": "^6.x.x",
         "babel-loader": "^x.x.x",
         "babel-preset-env": "^x.x.x",
         "babel-register": "^x.x.x",
@@ -48,17 +49,18 @@
         "html-webpack-template": "^x.x.x",
         "image-webpack-loader": "^x.x.x",
         "json-loader": "^x.x.x",
-        "mini-css-extract-plugin": "^0.4.0",
+        "mini-css-extract-plugin": "^x.x.x",
         "node-sass": "^x.x.x",
         "rimraf": "^x.x.x",
         "sass-loader": "^x.x.x",
         "style-loader": "^x.x.x",
         "url-loader": "^x.x.x",
-        "webpack": "^4.8.1",
+        "webpack": "^4.x.x",
+        "webpack-bundle-analyzer": "^x.x.x",
         "webpack-cli": "^x.x.x",
         "webpack-dashboard": "^x.x.x",
         "webpack-dev-server": "^x.x.x",
         "webpack-hot-middleware": "^x.x.x",
-        "webpack-xml-loader": "x.x.x"
+        "webpack-xml-loader": "^x.x.x"
     }
 }

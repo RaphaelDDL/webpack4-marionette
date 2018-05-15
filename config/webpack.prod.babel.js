@@ -13,7 +13,9 @@ import WebpackBaseConfigs from './webpack.base.config.babel.js';
 
 export default WebpackBaseConfigs( {
     mode: 'production',
-
+    entry: [
+        PATHS.entry
+    ],
     // Don't use hashes in dev mode for better performance
     output: {
         filename: '[name]-[chunkhash].js',
