@@ -26,6 +26,7 @@ export default WebpackBaseConfigs( {
 
     optimization: {
         namedModules: true,
+        minimize: false,
     },
 
     // Don't use hashes in dev mode for better performance
@@ -42,13 +43,18 @@ export default WebpackBaseConfigs( {
 
     // Emit a source map for easier debugging
     // See https://webpack.js.org/configuration/devtool/#devtool
-    devtool: 'eval-source-map',
+    devtool: 'inline-source-map',
+    // devtool: 'eval-source-map', // https://github.com/FormidableLabs/webpack-dashboard/issues/234#issuecomment-370915360
 
     // Add development plugins
     plugins: [
         new webpack.HotModuleReplacementPlugin(), // Tell webpack we want hot reloading
 
-        new BundleAnalyzerPlugin(), //analyzer runs on :8888
+        new BundleAnalyzerPlugin.BundleAnalyzerPlugin( {
+            analyzerMode: 'static',
+            openAnalyzer: false,
+            reportFilename: 'BundleAnalyzerReport.html' //file will be in dist
+        } ),
 
         new webpack.NamedModulesPlugin(),
 
